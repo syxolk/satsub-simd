@@ -1,4 +1,4 @@
-cmake_minimum_required(VERSION 3.10)
+cmake_minimum_required(VERSION 3.9)
 project(satsub CXX)
 
 set (CMAKE_CXX_STANDARD 11)
