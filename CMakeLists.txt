@@ -21,10 +21,12 @@ target_link_libraries(satsubbench benchmark benchmark_main)
 add_executable(satsubtest ${SOURCE} ${TESTS})
 target_link_libraries(satsubtest gtest gtest_main)
 
+add_executable(cpucheck cpucheck.cpp)
+
 # Call with `make test`
 enable_testing()
 add_test(SATSUB satsubtest)
 
 # Call with `make format`
-add_custom_target(format clang-format -i ${SOURCE} ${TESTS} ${BENCHMARKS}
+add_custom_target(format clang-format -i ${SOURCE} ${TESTS} ${BENCHMARKS} cpucheck.cpp
 WORKING_DIRECTORY ${CMAKE_SOURCE_DIR})
