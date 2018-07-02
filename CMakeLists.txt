@@ -6,7 +6,7 @@ set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -march=sandybridge")
 set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -Wall -Wextra -Wpedantic")
 
 set(BENCHMARK_ENABLE_GTEST_TESTS OFF CACHE BOOL "Enable GTest for GBenchmark")
-set(BENCHMARK_ENABLE_TESTING OFF CACHE BOOL "Build tests for GBenchmark")
+set(BENCHMARK_ENABLE_TESTING OFF)
 
 add_subdirectory(extern/googletest/googletest)
 add_subdirectory(extern/benchmark)
